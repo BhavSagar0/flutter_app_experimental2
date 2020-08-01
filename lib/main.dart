@@ -46,6 +46,9 @@ class HomePage extends StatelessWidget {
                           width: screen_Width,
                           height: (screen_Height) / 3)),
                   Container(
+                    padding: EdgeInsets.only(
+                        top : (screen_Width) / 25,
+                    ),
                     child:
                         Text(
                             "Are you an\nexisting member?",
@@ -57,54 +60,76 @@ class HomePage extends StatelessWidget {
                         ),
                   ),
                   
-                  Expanded(
-                    child: Container(
-                      child:
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                                RaisedButton(
-                                  onPressed: test_function,
+                  Container(
+                    padding: EdgeInsets.only(
+                      top : (screen_Width) / 9,
+                    ),
+                    child:
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                              Container(
+                                width: 112.0,
+                                height: 46.0,
+                                child: RaisedButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(24.0)
+                                  ),
+                                  onPressed: null,
                                 color: Colors.red,
+                                  disabledColor: Colors.red,
+                                  disabledTextColor: Colors.white,
                                   child:
                                   Text(
                                       "Yes",
                                     style: TextStyle(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold
+                                    fontWeight: FontWeight.bold,
+                                        fontSize: 24.0
                                     ),
 
 
+                                  )
 
 
-                                ),
+
+                            ),
                               ),
-                              RaisedButton(
-                                onPressed: test_function,
+                            Container(
+                              width: 112.0,
+                              height: 46.0,
+                              child: RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(24.0)
+                                ),
+                               onPressed: null,
                                 color: Colors.red,
+                                disabledColor: Colors.red,
+                                disabledTextColor: Colors.white,
                                 child:
                                 Text(
                                   "No",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold
+                                      fontWeight: FontWeight.bold,
+                                    fontSize: 24.0
                                   ),
 
                                 ),
 
 
-                              )
+                              ),
+                            )
 
 
 
-                            ],
-
-                      ),
-
-
-
+                          ],
 
                     ),
+
+
+
+
                   )
                 ]),
               )));
