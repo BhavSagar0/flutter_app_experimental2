@@ -112,12 +112,4 @@ class HomePage extends StatelessWidget {
           }
 
 
-  Widget test_function()
-  {
-    return Center(
-        child :
-        Text("Good Work!")
 
-    );
-
-  }
